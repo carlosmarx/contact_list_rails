@@ -1,10 +1,10 @@
 <section class="jumbotron text-center">
   <div class="container">
-    <h1>Album example</h1>
+    <h1>Contact List App</h1>
     <p class="lead text-muted">Crie e gerencie sua lista d contatos em um só lugar.</p>
     <p>
-      <a href="#" class="btn btn-primary my-2">Lista de contatos</a>
-      <a href="#" class="btn btn-secondary my-2">Cadastrar contatos</a>
+      <%= link_to  "Lista de contatos", contacts_path, class: 'btn btn-primary my-2' %>
+      <%= link_to  "Cadastrar novo", new_contact_path, class: 'btn btn-secondary my-2' %>
     </p>
   </div>
 </section>

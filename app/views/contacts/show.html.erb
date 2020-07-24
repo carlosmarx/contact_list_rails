@@ -1,0 +1,36 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>Name:</strong>
+        <%= @contact.name %>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <%= @contact.phone %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @contact.description %>
+      </p>
+
+      <p>
+        <strong>Status:</strong>
+        <%= @contact.status %>
+      </p>
+
+      <p>
+        <strong>Picture:</strong>
+        <%= @contact.picture %>
+      </p>
+
+      <%= link_to 'Edit', edit_contact_path(@contact) %> |
+      <%= link_to 'Back', contacts_path %>
+    </div>
+  </div>
+</div>

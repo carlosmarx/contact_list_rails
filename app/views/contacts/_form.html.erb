@@ -1,0 +1,40 @@
+
+<%= bootstrap_form_with(model: contact, local: true) do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+        <% contact.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.text_field :name %>
+
+  
+    <%= form.text_field :phone %>
+  
+
+  
+    
+    <%= form.text_area :description %>
+  
+
+  
+    
+    <%#= form.text_field :status %>
+    <%= form.select :status, [["Ativo", 1], ["Inativo", 0]], { label: "Selecione um status:", wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "selectpicker" } %>
+  
+
+  
+    
+    <%= form.text_field :picture %>
+  
+
+  <div class="actions">
+    <%= form.submit 'Salvar', class: 'btn btn-success' %>
+  </div>
+<% end %>
