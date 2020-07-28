@@ -1,0 +1,37 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuários
+      contact: Contatos
+    attributes:
+      default_attributes: &default_attributes
+        content: Conteúdo
+        description: Descrição
+        email: E-mail
+        name: Nome
+        note: Observações
+        status: Status
+        text: Conteúdo
+        title: Título
+        user: Usuário
+        created_at: Cadastrado em
+        updated_at: Atualizado em
+      user:
+        name: Nome
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        status: Situação
+      contact:
+        name: Nome
+        phone: Telefone
+        description: Descrição
+        status: Situação
+        picture: Imagem
+    # errors:
+    #   messages:
+    #     record_invalid: 'A validação falhou: %{errors}'
+    #     restrict_dependent_destroy:
+    #       has_one: Não é possível excluir o registro pois existe um %{record} dependente
+    #       has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    # attributes:
