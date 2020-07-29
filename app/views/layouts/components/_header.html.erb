@@ -12,6 +12,15 @@
             <li><%= link_to "Sobre nós", about_path, class: 'text-white' %></li>
             <li><%= link_to "Contate-nos", contact_us_path, class: 'text-white' %></li>
             <li><%= link_to "Nosso site", 'https://rltecno.com.br', class: 'text-white', target: '_blank' %></li>
+            
+            <% if !user_signed_in? %>
+
+              <li><%= link_to "Cadastrar-se", new_user_path, class: 'text-white' %></li>
+              
+              <li><%= link_to "Login", login_path, class: 'text-white' %></li>
+            <% else %>
+              <li><%= link_to "Logout", logout_path, method: :delete, class: 'text-white' %></li>
+            <% end %>
           </ul>
         </div>
       </div>

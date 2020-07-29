@@ -10,20 +10,15 @@
       <% end %>
     <% end %>
 
-    <% if !user_signed_in? %>
-      <p>
-        <%= link_to  "Criar Conta", new_user_path, class: 'btn btn-primary my-2' %>
-      </p>
-    <% end %>
+    <p>
+      <%= link_to  "Criar Conta", new_user_path, class: 'btn btn-primary my-2' %>
+    </p>
 
-    <h1>Contact List App</h1>
+    <h1>Olá <%= current_user.name %></h1>
     <p class="lead text-muted">Crie e gerencie sua lista d contatos em um só lugar.</p>
-    
-    <% if user_signed_in? %>
-      <p>
-        <%= link_to  "Lista de contatos", contacts_path, class: 'btn btn-success my-2' %>
-        <%= link_to  "Cadastrar novo", new_contact_path, class: 'btn btn-secondary my-2' %>
-      </p>
-    <% end %>
+    <p>
+      <%= link_to  "Lista de contatos", contacts_path, class: 'btn btn-success my-2' %>
+      <%= link_to  "Cadastrar novo", new_contact_path, class: 'btn btn-secondary my-2' %>
+    </p>
   </div>
 </section>

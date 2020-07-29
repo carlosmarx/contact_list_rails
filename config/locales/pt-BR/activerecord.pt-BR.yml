@@ -6,6 +6,7 @@ pt-BR:
     attributes:
       default_attributes: &default_attributes
         content: Conteúdo
+        password: Senha
         description: Descrição
         email: E-mail
         name: Nome

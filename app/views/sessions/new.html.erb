@@ -1,0 +1,32 @@
+<div class="py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag 'div', class: "alert alert-#{message_type} alert-dismissible", role: alert do %>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= message %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="row">
+
+      
+      
+      <%= bootstrap_form_tag url: '/login' do |f| %>
+        <%= f.email_field :email %>
+        <%= f.password_field :password %>
+        <%
+=begin%>
+ <%= f.check_box :remember_me %> 
+<%
+=end%>
+        <%= f.submit "Acessar", class: "btn btn-success" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
