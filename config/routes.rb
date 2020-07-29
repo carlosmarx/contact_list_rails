@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'contact_us', to: 'static_pages#contact'
 
   resources :contacts
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :edit, :update]
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
+  before_action :require_logged_in_user, only: [:show, :edit, :update]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-  
   end
 
   def new
@@ -22,6 +22,19 @@ class UsersController < ApplicationController
 
   def show
   end
+
+  def edit
+  end
+  
+  def update
+    if current_user.update(user_params)
+      flash[:success] = 'Dados atualizados com sucesso'
+      redirect_to contacts_path
+    else
+      render 'edit'
+    end
+  end
+  
 
   private
 
